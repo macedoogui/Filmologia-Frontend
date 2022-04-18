@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Filmologia</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <nav>
+        <img id='logo' src=''>
+        <ul id='menu'>
+          <li> <a href='#cadastro'>Inserir</a></li>
+          <li><a href='#banners'>Filmes</a></li>
+        </ul>
+        
+      </nav>
+    
+    <main>
+      
+      <section id ='novo'>
+        <button type='button' onclick="abrirCadastro()">Cadastre um novo filme</button>
+        <div id='cadastro'>
+          
+          <a onclick="fecharlCadastro()" class="close-modal">x</a>
+          
+          <form>
+              <label for='nome'>Título do filme: </label>
+              <input type='text' name='nome' class ='nome'>
+  
+              <label for='imagem'>Capa do filme: </label>
+              <input type='text' name='imagem' class ='imagem'>
+
+              <label for='nota'>Nota: </label>
+              <input type='text' name='nota' class ='nota'>
+                 
+              <label for='sinopse'>Sinopse: </label>
+              <input type='text' name='sinopse' class ='sinopse'>
+
+          <button onclick="createFilme()">Cadastrar</button>
+          </form>
+        </div>
+      </section>
+
+      <section id='banner'>
+
+                     <h2>Pesquisar Filme</h2>
+        <div class="filme-escolhido-espaco">
+            <div id="filme-escolhido-input-espaco">
+                <input type="number" id="idFilme" placeholder="Digite o ID do Filme e clique em 'Escolher'" />
+                <button id="idFilmeButton" onclick="findByIdFilmes()">ESCOLHER</button>
+            </div>
+            <div id="filmeEscolhido">
+
+            </div>
+        </div>
+                  
+<h2>Filmes na Seção</h2>
+
+      <div class="home">
+        
+        <div class="FilmeLista" id="banners"></div>
+      </div>
+    </div>
+                     
+      </section>
+      
+    </main>
+    
+    <footer>
+      <p>Este é um projeto de Guilherme Macedo</p>
+    </footer>
+    
+<script src="script.js"></script>
+  </body>
+</html>
